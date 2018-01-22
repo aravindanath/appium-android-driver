@@ -333,7 +333,7 @@ describe('General', function () {
       driver.adb.stopAndClear.calledWithExactly('pkg').should.be.true;
       driver.grantPermissions.calledOnce.should.be.true;
       driver.startAUT.calledOnce.should.be.true;
-      expect(driver.curContext).to.be.null;
+      expect(driver.curContext).to.eql('NATIVE_APP');
     });
   });
   describe('startAUT', function () {
